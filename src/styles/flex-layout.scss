@@ -1,0 +1,110 @@
+/*Блок flex-container */
+.flex-container {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+/* Модификатор vertical*/
+.flex-container_vertical {
+  flex-direction: column;
+}
+
+/* Модификатор horizontal*/
+.flex-container_horizontal {
+  flex-direction: row;
+}
+
+/* Модификатор baseline*/
+.flex-container_baseline {
+  align-items: baseline;
+}
+
+/* Модификатор baseline*/
+.flex-container_center {
+  align-items: center;
+}
+
+/* Модификатор vertical*/
+.flex-container_start {
+  justify-content: flex-start;
+}
+
+.flex-container > .flex-container__flex-resizer {
+  flex: 0 0 10px;
+  /* background: white; */
+  background-color: rgba(196, 196, 196, 0.514);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.flex-container.flex-container_horizontal > .flex-container__flex-resizer {
+  cursor: ew-resize;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='30'><path d='M2 0 v30 M5 0 v30 M8 0 v30' fill='none' stroke='black'/></svg>");
+}
+
+.flex-container.flex-container_vertical > .flex-container__flex-resizer {
+  cursor: ns-resize;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='10'><path d='M0 2 h30 M0 5 h30 M0 8 h30' fill='none' stroke='black'/></svg>");
+}
+
+/* Элемент flex-item*/
+.flex-container__flex-item {
+  overflow: hidden;
+  flex: 1;
+}
+/* Модификатор fixed*/
+.flex-container__flex-item_fixed {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  transition: flex-grow, flex-shrink, max-height, min-height 0.35s ease;
+}
+/* Модификатор scrollable*/
+.flex-container__flex-item_scrollable {
+  overflow: auto;
+  transition: flex-grow, flex-shrink, max-height, min-height 0.35s ease;
+}
+
+
+/* Элемент flex-item*/
+.flex-container__flex-item-container {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Модификатор fixed*/
+.flex-container__flex-item-container_fixed {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  transition: flex-grow, flex-shrink, max-height, min-height 0.35s ease;
+}
+/* Модификатор scrollable*/
+.flex-container__flex-item-container_scrollable {
+  overflow: auto;
+  transition: flex-grow, flex-shrink, max-height, min-height 0.35s ease;
+}
+
+
+/* Модификатор vertical*/
+.flex-container__flex-item-container_vertical {
+  flex-direction: column;
+}
+
+/* Модификатор horizontal*/
+.flex-container__flex-item-container_horizontal {
+  flex-direction: row;
+}
+
+/* Модификатор baseline*/
+.flex-container__flex-item-container_baseline {
+  align-items: baseline;
+}
+
+
+/* Модификатор vertical*/
+.flex-container__flex-item-container_start {
+  justify-content: flex-start;
+}

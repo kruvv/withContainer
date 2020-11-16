@@ -1,0 +1,230 @@
+
+
+$color_table_outer_border: rgb(192, 192, 192);
+$color_table_border: rgb(224, 224, 224);
+$color_bg_cell: rgb(255,255,255);
+$color_bg_cell_hover: rgb(240, 240, 240);
+$color_bg_cell_header: rgb(243, 243, 243);
+$color_bg_cell_selected: rgb(202, 243, 219);
+$color_bg_cell_selected_hover: rgb(186, 226, 203);
+
+
+.composed-list{
+	border:1px solid $color_table_outer_border;
+	background-color:  $color_bg_cell;
+}
+
+
+.composed-list__wrapper {
+
+}
+.composed-list__wrapper_hasSticky {
+	overflow: visible
+}
+
+.composed-list__header {
+	margin-bottom: 3px;
+	}
+
+.composed-list__item {
+	 border-bottom:1px solid $color_table_border;
+	 background-color: $color_bg_cell;
+	 align-items: baseline;
+	 overflow: inherit;
+}
+.composed-list__item_smaller {
+	font-size: 0.87rem;
+}
+
+.composed-list__item_smallest {
+	font-size: 0.67rem;
+	font-family: Verdana, sans-serif;
+}
+
+.composed-list__item_dense  .composed-list__field {
+	padding: 1px 2px;
+	//  margin: 1px 4px;
+}
+
+.composed-list__item_nowrap  .composed-list__field{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.composed-list__item_separated {
+ padding: 2px;
+ margin: 4px;
+
+}
+
+// .composed-list__item:last-child {
+// 	border-bottom:0px;
+// }
+
+.composed-list__item:hover {
+	box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+	z-index: 50;
+	filter: brightness(95%) ;
+	// background-color: $color_bg_cell_hover;
+}
+
+.composed-list__item_selected {
+	background-color: $color_bg_cell_selected;
+}
+
+.composed-list__item_selected:hover {
+	box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+	z-index: 50;
+	filter: brightness(95%) ;
+	// background-color: rgba(51, 155, 240, 0.144);
+	//background-color: $color_bg_cell_selected_hover;
+}
+
+.composed-list__field {
+	// border:1px solid rgb(243, 202, 236);
+	padding: 2px;
+	// margin: 3px;
+	box-sizing: border-box;
+	padding-left: 6px;
+}
+
+.composed-list__field:first-child {
+	padding-left: 6px;
+
+}
+
+.composed-list__field_nowrap {
+	// border:1px solid rgb(243, 202, 236);
+	padding: 2px;
+	margin: 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	// height:1.5rem;
+}
+
+.composed-list__item_start {
+	justify-content:flex-start;
+}
+.composed-list__item_centered {
+	align-items: center;
+}
+.composed-list__item_header {
+	
+	background-color: $color_bg_cell;
+	font-weight: 600;
+}
+.composed-list__item_header:hover {
+	// background-color: $color_bg_cell;
+	filter: brightness(100%) ;
+}
+.composed-list__item_sticky {
+ 	position: sticky;
+	top: 0;
+	z-index: 100;
+
+}
+.composed-list__item_sticky:hover{
+	box-shadow: none;
+}
+
+.composed-list__item_overflowVisible {
+	overflow: visible;
+}
+
+.composed-list__item_nounderline {
+	border-bottom:0;
+}
+
+.composed-list__item_nohover:hover {
+	box-shadow:none;
+	z-index: 0;
+	filter: brightness(100%);
+}
+
+.composed-list__item_width150 {
+	width: 150px;
+}
+
+.composed-list__item_width100 {
+	width: 100px;
+}
+
+.composed-list__item_width80 {
+	width: 80px;
+}
+
+.composed-list__field_smaller {
+	font-size: 0.87rem;
+}
+
+.composed-list__field_larger {
+	font-size: 1.05rem;
+}
+
+.composed-list__field_strong{
+	font-weight: 600;
+}
+.composed-list__field_span {
+	margin-left:0px;
+	margin-right:0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.composed-list__field_width80 {
+	min-width: 80px;
+	max-width: 80px;
+}
+.composed-list__field_width50 {
+	min-width: 50px;
+	max-width: 50px;
+}
+.composed-list__field_width100 {
+	min-width: 100px;
+	max-width: 100px;
+}
+
+
+.composed-list__field_width150 {
+	min-width: 150px;
+	max-width: 150px;
+}
+
+.composed-list__field_width20 {
+	min-width: 20px;
+	max-width: 20px;
+}
+
+.composed-list__field_width40 {
+	min-width: 40px;
+	max-width: 40px;
+}
+
+.composed-list__field_minWidth {
+	min-width: 80px;
+}
+
+.composed-list__field_select {
+	// border:1px solid $color_table_border;
+	padding: 5px;
+	margin: 0px 0px 0px 5px;
+	// background-color: rgb(186, 208, 226);
+	box-sizing: border-box;
+
+}
+
+.composed-list_loading {
+	padding-left: 5px;
+}
+
+.composed-list_no-data-message {
+	padding-left: 5px;
+}
+.composed-list__item-line {
+	align-items: baseline;
+}
+
+.composed-list__icon_smallest {
+	 margin-top: -2px;
+}

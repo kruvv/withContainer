@@ -1,0 +1,53 @@
+.flex-toolbar {
+	align-items: center;
+	// margin-bottom: 2px;
+}
+.flex-toolbar_start {
+	justify-content: flex-start;
+}
+
+.flex-toolbar__button {
+	box-sizing: border-box;
+	background-color: #d1d1d1;
+	border: 1px solid gray;
+	margin: 3px 0px 4px 5px;
+	padding: 3px;
+	font-size: 0.85rem;
+	border-radius: 0.1rem;
+}
+
+.flex-toolbar__button_searchbar {
+	margin: 0px 2px 0px 0px;
+}
+
+.flex-toolbar__button_disabled {
+	color: rgb(155, 155, 155);
+}
+
+.flex-toolbar__label {
+	box-sizing: border-box;
+	margin: 3px 0px;
+	padding: 3px  3px 3px 0px;
+	font-size: 0.85rem;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.flex-toolbar__label_minimum {
+	min-width: 5px;
+	max-width: 350px;
+}
+
+.flex-toolbar__label_marginLeft {
+  margin-left: 0.2rem;;
+}
+
+.flex-toolbar__button:hover{
+	background-color: rgb(189, 189, 189);
+}
+
+.flex-toolbar__button-editor {
+	@extend .flex-toolbar__button;
+	line-height: 0.5;
+}
